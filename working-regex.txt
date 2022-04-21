@@ -1,0 +1,1 @@
+/<td\s+class="\w+"\s+colspan="\d+"\s+rowspan="\d+"><p\s+class="\w+"><span\s+class="\w+">([\w\W][^<>]+?)<\/span><\/p><p\s+class="[\w\s]+"><span\s+class="\w+"><\/span><\/p><p\s+class="\w+"><span\s+class="\w+">.*?<\/span><\/p><\/td><td.*?href="(.*?)"/gm

@@ -1,0 +1,1 @@
+/\/td><td.*?<span\s+class="\w(7|17)">(.+?)<\/span><\/p><p.*?<td.*?href="(.*?)"/gm

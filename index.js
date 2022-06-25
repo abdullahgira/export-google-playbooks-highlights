@@ -1,7 +1,7 @@
 const fs = require("fs");
 const docx = require("docx");
 const { Paragraph, ExternalHyperlink, Packer, TextRun } = require("docx");
-const he = require('he')
+const he = require("he");
 
 async function main() {
   const args = process.argv.slice(2);
@@ -62,7 +62,12 @@ const writeToDocx = (obj) => {
       ],
     });
 
-    children.push(paragraph, link, new Paragraph({ text: "" }));
+    children.push(
+      paragraph,
+      link,
+      new Paragraph({ text: "" }),
+      new Paragraph({ text: "" })
+    );
   }
 
   const doc = new docx.Document({

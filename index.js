@@ -1,6 +1,7 @@
 const fs = require("fs");
 const docx = require("docx");
 const { Paragraph, ExternalHyperlink, Packer, TextRun } = require("docx");
+const he = require('he')
 
 async function main() {
   const args = process.argv.slice(2);
@@ -35,7 +36,7 @@ const filterTrash = (data) => {
   const matches = data.matchAll(regexp);
 
   for (const match of matches)
-    returnVal.push({ note: match[1], link: match[2] });
+    returnVal.push({ note: he.decode(match[1]), link: match[2] });
 
   return returnVal;
 };
